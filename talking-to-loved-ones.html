@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Talking to Loved Ones · Rise After Rupture</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--cream:#FAF6F1;--warm-white:#FDF9F5;--terracotta:#C4735A;--terracotta-light:#D98E78;--mauve:#9B7B8A;--mauve-dark:#6B4E5E;--sage:#8A9E8C;--text-dark:#2C1F1A;--text-mid:#5C4A42;--text-light:#9A8880;--gold:#C9A96E;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,246,241,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,115,90,0.12);}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--terracotta);letter-spacing:0.02em;text-decoration:none;}
+  .nav-back{display:inline-flex;align-items:center;gap:0.5rem;color:var(--text-mid);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:1.5px solid rgba(92,74,66,0.25);padding:0.45rem 1.1rem;border-radius:2rem;transition:all 0.2s;}
+  .nav-back:hover{color:var(--terracotta);border-color:var(--terracotta);}
+  .page-hero{padding:9rem 3rem 4rem;max-width:900px;margin:0 auto;}
+  .page-tag{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid var(--terracotta);padding:0.35rem 1rem;border-radius:2rem;margin-bottom:1.5rem;}
+  .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--text-dark);margin-bottom:1.2rem;}
+  .page-title em{font-style:italic;color:var(--terracotta);}
+  .page-intro{font-size:1.05rem;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:680px;border-left:3px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3rem;}
+  .content-wrap{max-width:900px;margin:0 auto;padding:0 3rem 6rem;}
+  .section-block{margin-bottom:3.5rem;}
+  .section-block h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text-dark);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(196,115,90,0.2);}
+  .section-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--mauve-dark);margin:1.5rem 0 0.6rem;}
+  .section-block p{font-size:0.97rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1rem;}
+  .section-block p strong{color:var(--text-dark);font-weight:500;}
+  .section-block ul{list-style:none;margin:0.5rem 0 1.2rem;padding:0;}
+  .section-block ul li{font-size:0.95rem;line-height:1.8;color:var(--text-mid);font-weight:300;padding:0.35rem 0 0.35rem 1.8rem;position:relative;}
+  .section-block ul li::before{content:'✦';position:absolute;left:0;color:var(--terracotta);font-size:0.58rem;top:0.72rem;}
+  .warm-callout{background:linear-gradient(135deg,#F5EDE8 0%,#EDD9D0 100%);border-radius:1.2rem;padding:1.8rem 2.2rem;margin:2rem 0;border-left:4px solid var(--terracotta);}
+  .warm-callout p{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;line-height:1.7;color:var(--text-dark);margin:0;font-weight:300;}
+  .info-card{background:white;border-radius:1rem;padding:1.8rem 2rem;border:1px solid rgba(196,115,90,0.12);margin:1.2rem 0;box-shadow:0 4px 18px rgba(196,115,90,0.07);}
+  .info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--text-dark);margin-bottom:0.5rem;}
+  .info-card p{margin:0;font-size:0.9rem;line-height:1.75;}
+  .warning-box{background:#FDF5F3;border:1.5px solid rgba(196,115,90,0.35);border-radius:1rem;padding:1.5rem 2rem;margin:1.5rem 0;}
+  .warning-title{font-weight:500;font-size:0.85rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.7rem;}
+  .stat-highlight{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;}
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0;}
+  .stat-card{background:white;border-radius:1rem;padding:1.5rem;text-align:center;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 18px rgba(196,115,90,0.06);}
+  .stat-card .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;margin-bottom:0.4rem;}
+  .stat-card .label{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);line-height:1.4;}
+  .founder-aside{display:flex;gap:2rem;align-items:center;background:white;border-radius:1.5rem;padding:2rem;margin:3rem 0;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 20px rgba(196,115,90,0.08);}
+  .founder-aside img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(196,115,90,0.3);flex-shrink:0;}
+  .founder-aside-text p{font-size:0.88rem;line-height:1.75;color:var(--text-mid);font-weight:300;margin:0;}
+  .founder-aside-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--terracotta);margin-bottom:0.3rem;}
+  .join-cta{background:linear-gradient(135deg,#2C1F1A 0%,#4A2E28 100%);border-radius:1.5rem;padding:3rem;text-align:center;margin:4rem 0 2rem;}
+  .join-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:white;margin-bottom:0.8rem;}
+  .join-cta p{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.75;margin-bottom:1.6rem;max-width:500px;margin-left:auto;margin-right:auto;}
+  .btn-primary{background:var(--terracotta);color:white;padding:0.85rem 2.2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;text-decoration:none;display:inline-block;transition:background 0.3s;letter-spacing:0.04em;}
+  .btn-primary:hover{background:var(--mauve-dark);}
+  footer{background:#1A0F0C;color:rgba(255,255,255,0.5);padding:2.5rem 3rem;text-align:center;}
+  .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--terracotta-light);margin-bottom:0.5rem;}
+  .footer-link{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+  .footer-link:hover{color:var(--terracotta-light);}
+  .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:0.8rem;}
+  @media(max-width:700px){nav{padding:1rem 1.5rem;}.page-hero,.content-wrap{padding-left:1.5rem;padding-right:1.5rem;}.stats-row{grid-template-columns:1fr;}.founder-aside{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="rise-after-rupture.html" class="nav-logo">Rise After Rupture</a>
+  <a href="rise-after-rupture.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Partners · Family · Connection</span>
+  <h1 class="page-title">Talking to the<br><em>People You Love</em></h1>
+  <p class="page-intro">An ectopic rupture is so much more than most people around you realize. Helping your partner, family, and friends truly understand what you've been through — and what you actually need — takes energy you may not have. This page helps you find the words.</p>
+</div>
+
+<div class="content-wrap">
+  <div class="section-block">
+    <h2>Why This Conversation Is Hard</h2>
+    <p>An ectopic rupture is so much more complex than most people around you realize. Even the words "ectopic pregnancy" or "pregnancy loss" don't begin to capture what you went through — an emergency surgery, internal bleeding, the sudden rewriting of a future you had already started to imagine. And yet you will be expected to explain it, often to people who won't quite understand, in moments when you have almost no capacity to educate anyone.</p>
+    <p>This page is here to give you language, frameworks, and permission to protect your energy — while still letting the people you love actually understand what you've been through.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>Talking to Your Partner</h2>
+    <p>Partners often experience their own version of trauma after a rupture. Many watched the person they love most be rushed into emergency surgery, were told there was a risk they might not survive, and then spent the weeks afterward being asked to be strong, steady, and supportive — while grieving something of their own.</p>
+    <p>Research from the Ectopic Pregnancy Trust shows that around 1 in 12 partners experiences post-traumatic stress following early pregnancy loss. Both of your experiences are real. Neither cancels out the other.</p>
+    <h3>Things that can help</h3>
+    <ul>
+      <li>Name what you each need — and be specific. "I need you to hold me without trying to fix it" is different from "I need some space to feel this alone," and both are valid</li>
+      <li>Don't assume your partner is okay because they look okay. Ask. And create space for them to be honest</li>
+      <li>Try to grieve together when you can — even if your grief looks entirely different from each other's</li>
+      <li>Consider couples counseling with a therapist who understands pregnancy loss — this is not a sign of a broken relationship, it is an investment in navigating something genuinely hard together</li>
+    </ul>
+    <h3>When your partner says something that lands wrong</h3>
+    <p>Partners often say the wrong thing — not from cruelty but from helplessness. "At least you're okay," "we can try again," or "try to stay positive" can feel devastating even when they're meant with love. If this happens, try naming the impact rather than the intention:</p>
+    <div class="warm-callout">
+      <p>"When you said that, it felt like you were minimizing the loss. What I actually need to hear is that this was terrible, and that you know it was terrible, and that you're here."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Helping Family Understand</h2>
+    <p>Family — especially parents — may conflate "ectopic pregnancy" with an early miscarriage and not understand that you were in a life-threatening emergency. Here is language you can share, or adapt, to help them understand:</p>
+    <div class="info-card">
+      <div class="info-card-title">What to tell family who don't fully understand</div>
+      <p>"An ectopic pregnancy is when the baby grows in the fallopian tube instead of the uterus. When the tube ruptures, it causes severe internal bleeding — it is a medical emergency, like a burst appendix but more dangerous. I was losing blood internally and needed emergency surgery to survive. This is both a pregnancy loss and a trauma. My recovery will take time — physically and emotionally. What I need from you right now is [specific thing: regular check-ins / to let me grieve without pressure / to not ask when we'll try again]."</p>
+    </div>
+    <h3>Setting limits with family</h3>
+    <ul>
+      <li>You are not required to give updates to everyone who asks</li>
+      <li>"I'm not ready to talk about it yet" is a complete and sufficient sentence</li>
+      <li>It is okay to ask your partner or a close friend to be the point person who updates others</li>
+      <li>If certain family members are making things harder — with pressure, minimizing, or unsolicited advice about trying again — limiting those conversations is a valid act of self-protection</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>Talking to Friends</h2>
+    <p>Friends often go quiet — not because they don't care, but because they don't know what to say and fear saying the wrong thing. The most useful thing you can do is be specific about what you need.</p>
+    <ul>
+      <li>"I don't need advice. I just need someone to listen" is a complete and powerful sentence</li>
+      <li>Ask for concrete things: "Can you bring me dinner on Wednesday?" is much easier to say yes to than a general "let me know if you need anything"</li>
+      <li>If a friend has gone quiet, you can reach out and make it easy: "I don't need anything specific — I just wanted you to know what happened and have you know I'm okay enough"</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>Responding to Things People Say</h2>
+    <p>Here are some common responses survivors encounter — and language you can use if you want to gently correct or set a limit:</p>
+    <ul>
+      <li><strong>"At least you're okay."</strong><br>→ "I'm physically alive, yes. But I'm also grieving, and that's real and it's hard."</li>
+      <li><strong>"You can always try again."</strong><br>→ "I know you mean well. But right now I'm not thinking about trying again — I'm grieving this one."</li>
+      <li><strong>"Everything happens for a reason."</strong><br>→ "That's not something that helps me right now. What I need is for someone to acknowledge how hard this is."</li>
+      <li><strong>"You should be feeling better by now."</strong><br>→ "Grief doesn't have a timeline. I'm still healing."</li>
+      <li><strong>[Silence — no acknowledgment at all]</strong><br>→ "I went through something serious recently, and I wanted you to know. I'm not expecting anything — I just needed to say it out loud."</li>
+    </ul>
+    <div class="warm-callout">
+      <p>"You will find out who your people are. Some will surprise you with their grace. Some will disappoint you. And some of the most understanding companions you will ever find are women you haven't met yet — women in this community who already know."</p>
+    </div>
+  </div>
+
+
+  <div class="join-cta">
+    <h3>You don't have to navigate this alone.</h3>
+    <p>Join our community of survivors — virtual support groups, honest resources, and women who truly understand what you've been through.</p>
+    <a href="rise-after-rupture.html#join" class="btn-primary">Join Our Community 💛</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Rise After Rupture</div>
+  <a href="rise-after-rupture.html" class="footer-link">← Return to main site</a>
+  <div class="footer-copy">© 2026 Rise After Rupture · Made with love, from one survivor to another</div>
+</footer>
+</body>
+</html>

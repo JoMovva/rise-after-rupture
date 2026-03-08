@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Processing Trauma & Grief · Rise After Rupture</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--cream:#FAF6F1;--warm-white:#FDF9F5;--terracotta:#C4735A;--terracotta-light:#D98E78;--mauve:#9B7B8A;--mauve-dark:#6B4E5E;--sage:#8A9E8C;--text-dark:#2C1F1A;--text-mid:#5C4A42;--text-light:#9A8880;--gold:#C9A96E;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,246,241,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,115,90,0.12);}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--terracotta);letter-spacing:0.02em;text-decoration:none;}
+  .nav-back{display:inline-flex;align-items:center;gap:0.5rem;color:var(--text-mid);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:1.5px solid rgba(92,74,66,0.25);padding:0.45rem 1.1rem;border-radius:2rem;transition:all 0.2s;}
+  .nav-back:hover{color:var(--terracotta);border-color:var(--terracotta);}
+  .page-hero{padding:9rem 3rem 4rem;max-width:900px;margin:0 auto;}
+  .page-tag{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid var(--terracotta);padding:0.35rem 1rem;border-radius:2rem;margin-bottom:1.5rem;}
+  .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--text-dark);margin-bottom:1.2rem;}
+  .page-title em{font-style:italic;color:var(--terracotta);}
+  .page-intro{font-size:1.05rem;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:680px;border-left:3px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3rem;}
+  .content-wrap{max-width:900px;margin:0 auto;padding:0 3rem 6rem;}
+  .section-block{margin-bottom:3.5rem;}
+  .section-block h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text-dark);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(196,115,90,0.2);}
+  .section-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--mauve-dark);margin:1.5rem 0 0.6rem;}
+  .section-block p{font-size:0.97rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1rem;}
+  .section-block p strong{color:var(--text-dark);font-weight:500;}
+  .section-block ul{list-style:none;margin:0.5rem 0 1.2rem;padding:0;}
+  .section-block ul li{font-size:0.95rem;line-height:1.8;color:var(--text-mid);font-weight:300;padding:0.35rem 0 0.35rem 1.8rem;position:relative;}
+  .section-block ul li::before{content:'✦';position:absolute;left:0;color:var(--terracotta);font-size:0.58rem;top:0.72rem;}
+  .warm-callout{background:linear-gradient(135deg,#F5EDE8 0%,#EDD9D0 100%);border-radius:1.2rem;padding:1.8rem 2.2rem;margin:2rem 0;border-left:4px solid var(--terracotta);}
+  .warm-callout p{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;line-height:1.7;color:var(--text-dark);margin:0;font-weight:300;}
+  .info-card{background:white;border-radius:1rem;padding:1.8rem 2rem;border:1px solid rgba(196,115,90,0.12);margin:1.2rem 0;box-shadow:0 4px 18px rgba(196,115,90,0.07);}
+  .info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--text-dark);margin-bottom:0.5rem;}
+  .info-card p{margin:0;font-size:0.9rem;line-height:1.75;}
+  .warning-box{background:#FDF5F3;border:1.5px solid rgba(196,115,90,0.35);border-radius:1rem;padding:1.5rem 2rem;margin:1.5rem 0;}
+  .warning-title{font-weight:500;font-size:0.85rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.7rem;}
+  .stat-highlight{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;}
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0;}
+  .stat-card{background:white;border-radius:1rem;padding:1.5rem;text-align:center;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 18px rgba(196,115,90,0.06);}
+  .stat-card .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;margin-bottom:0.4rem;}
+  .stat-card .label{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);line-height:1.4;}
+  .founder-aside{display:flex;gap:2rem;align-items:center;background:white;border-radius:1.5rem;padding:2rem;margin:3rem 0;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 20px rgba(196,115,90,0.08);}
+  .founder-aside img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(196,115,90,0.3);flex-shrink:0;}
+  .founder-aside-text p{font-size:0.88rem;line-height:1.75;color:var(--text-mid);font-weight:300;margin:0;}
+  .founder-aside-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--terracotta);margin-bottom:0.3rem;}
+  .join-cta{background:linear-gradient(135deg,#2C1F1A 0%,#4A2E28 100%);border-radius:1.5rem;padding:3rem;text-align:center;margin:4rem 0 2rem;}
+  .join-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:white;margin-bottom:0.8rem;}
+  .join-cta p{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.75;margin-bottom:1.6rem;max-width:500px;margin-left:auto;margin-right:auto;}
+  .btn-primary{background:var(--terracotta);color:white;padding:0.85rem 2.2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;text-decoration:none;display:inline-block;transition:background 0.3s;letter-spacing:0.04em;}
+  .btn-primary:hover{background:var(--mauve-dark);}
+  footer{background:#1A0F0C;color:rgba(255,255,255,0.5);padding:2.5rem 3rem;text-align:center;}
+  .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--terracotta-light);margin-bottom:0.5rem;}
+  .footer-link{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+  .footer-link:hover{color:var(--terracotta-light);}
+  .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:0.8rem;}
+  @media(max-width:700px){nav{padding:1rem 1.5rem;}.page-hero,.content-wrap{padding-left:1.5rem;padding-right:1.5rem;}.stats-row{grid-template-columns:1fr;}.founder-aside{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="rise-after-rupture.html" class="nav-logo">Rise After Rupture</a>
+  <a href="rise-after-rupture.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Mental Health · Grief · Healing</span>
+  <h1 class="page-title">Processing Trauma<br><em>& Grief</em></h1>
+  <p class="page-intro">An ectopic rupture is both a life-threatening emergency and a pregnancy loss — and the emotional aftermath is significant, documented, and real. Research shows nearly 1 in 3 women meet PTSD criteria after early pregnancy loss. What you are carrying is not an overreaction. This page is here to help you understand it and find the right support.</p>
+</div>
+
+<div class="content-wrap">
+  <div class="section-block">
+    <h2>This Was Traumatic — Full Stop</h2>
+    <p>An ectopic rupture is both a life-threatening medical emergency and a pregnancy loss at the same time. Research published in the <em>American Journal of Obstetrics and Gynecology</em> — one of the largest studies of its kind, following over 650 women — found that nearly 1 in 3 women (29%) met the criteria for post-traumatic stress one month after early pregnancy loss, with women who had ectopic pregnancies showing higher rates of ongoing PTSD than those who had miscarriages.</p>
+    <p>At 9 months after their loss, 21% of women who had experienced an ectopic pregnancy still showed PTSD symptoms, compared to 16% after miscarriage. What you are carrying is not an overreaction. It is a documented, measurable response to something genuinely traumatic.</p>
+    <div class="stats-row">
+      <div class="stat-card"><div class="num">29%</div><div class="label">of women meet PTSD criteria 1 month after early pregnancy loss</div></div>
+      <div class="stat-card"><div class="num">24%</div><div class="label">experience moderate to severe anxiety at 1 month</div></div>
+      <div class="stat-card"><div class="num">21%</div><div class="label">of ectopic pregnancy survivors still show PTSD symptoms at 9 months</div></div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>The Many Shapes of Grief</h2>
+    <p>Grief after a rupture doesn't come in a neat order or follow a recognizable shape. You may feel all of these, some of these, or things that don't have names yet:</p>
+    <ul>
+      <li><strong>Shock and disbelief</strong> — a surreal quality to the days after, like it happened to someone else</li>
+      <li><strong>Grief for the baby</strong> — for the pregnancy, for the future you had already started to imagine</li>
+      <li><strong>Grief for your body</strong> — for the version of yourself who walked into that hospital not knowing what was coming</li>
+      <li><strong>Fear</strong> — of hospitals, of being pregnant again, of your own body</li>
+      <li><strong>Guilt</strong> — a feeling that you should have known sooner, done something differently (you couldn't have)</li>
+      <li><strong>Anger</strong> — at the circumstances, at the randomness of it, sometimes at people who don't understand</li>
+      <li><strong>Relief, and then guilt about the relief</strong> — that you survived, that it's over</li>
+      <li><strong>Isolation</strong> — a feeling that no one around you truly understands what this was</li>
+    </ul>
+    <div class="warm-callout">
+      <p>"There is no right way to grieve. There is no timeline. Some days you will feel strong and some days you will fall apart completely. Both are valid. Both are part of the same healing."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Understanding Post-Traumatic Stress After a Rupture</h2>
+    <p>The Ectopic Pregnancy Trust reports that up to 1 in 3 women may develop distressing symptoms of post-traumatic stress following an ectopic pregnancy. PTSD is not weakness — it is a biological response to a life-threatening event. The four main categories of symptoms to be aware of:</p>
+    <h3>Re-experiencing</h3>
+    <ul>
+      <li>Flashbacks of the rupture, the ambulance ride, or waking up from surgery</li>
+      <li>Nightmares or vivid, distressing dreams about the event</li>
+      <li>Physical symptoms (racing heart, sweating, nausea) when reminded of what happened</li>
+    </ul>
+    <h3>Hypervigilance</h3>
+    <ul>
+      <li>Feeling constantly on edge or waiting for something else to go wrong</li>
+      <li>Being easily startled, difficulty sleeping, irritability that feels out of proportion</li>
+      <li>Intense anxiety at medical appointments or hospitals</li>
+    </ul>
+    <h3>Avoidance and numbness</h3>
+    <ul>
+      <li>Avoiding hospitals, certain streets, conversations that might touch the experience</li>
+      <li>Emotional numbness — feeling nothing, or feeling disconnected from yourself</li>
+      <li>Difficulty connecting with people who haven't been through this</li>
+    </ul>
+    <h3>Negative thoughts and self-blame</h3>
+    <ul>
+      <li>Persistent guilt or self-blame (this was not your fault)</li>
+      <li>Feeling unsafe in your own body</li>
+      <li>A loss of trust in the future</li>
+    </ul>
+    <p>If these symptoms are significantly affecting your daily life for more than a few weeks, please reach out to a doctor or therapist. Early intervention makes a real difference.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>Finding the Right Support</h2>
+    <p>Not all mental health professionals are equally prepared to support survivors of ectopic rupture and pregnancy loss. The most effective evidence-based treatments include:</p>
+    <ul>
+      <li><strong>Trauma-focused CBT</strong> — cognitive behavioral therapy adapted for PTSD, which helps change how your mind processes traumatic memories</li>
+      <li><strong>EMDR (Eye Movement Desensitization and Reprocessing)</strong> — reprocesses distressing memories so they stop causing such intense responses; particularly effective for flashbacks</li>
+      <li><strong>Somatic therapy</strong> — body-based approaches, helpful when the physical memory of the rupture feels stored in your body</li>
+    </ul>
+    <div class="info-card">
+      <div class="info-card-title">How to find a grief-informed therapist</div>
+      <p>Ask your OB for a referral · Search Psychology Today's therapist directory and filter for "grief" and "pregnancy loss" · Look for therapists with experience in perinatal loss or medical trauma · For culturally sensitive support, search for therapists who specifically work with immigrants or who share your cultural background · BetterHelp and Talkspace offer online therapy accessible from anywhere in the US</p>
+    </div>
+    <div class="warm-callout">
+      <p>"Seeking support is not a sign that you aren't coping. It is a sign that you are taking your own suffering seriously — which is exactly what you deserve to do."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Day to Day: What May Help</h2>
+    <ul>
+      <li>Journaling — give your grief a place to exist without judgment or an audience</li>
+      <li>A small ritual to acknowledge the baby you lost — a plant, a candle, a quiet moment each week</li>
+      <li>Talking to women who have been through it — peer connection is different from professional support, and both matter</li>
+      <li>Limiting the pressure to explain or perform recovery for others who haven't been through it</li>
+      <li>Gentle movement and time outdoors — both help regulate the nervous system over time</li>
+      <li>Naming what you are feeling, even to yourself — language gives grief a shape, and a shape makes it more navigable</li>
+    </ul>
+  </div>
+
+
+  <div class="join-cta">
+    <h3>You don't have to navigate this alone.</h3>
+    <p>Join our community of survivors — virtual support groups, honest resources, and women who truly understand what you've been through.</p>
+    <a href="rise-after-rupture.html#join" class="btn-primary">Join Our Community 💛</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Rise After Rupture</div>
+  <a href="rise-after-rupture.html" class="footer-link">← Return to main site</a>
+  <div class="footer-copy">© 2026 Rise After Rupture · Made with love, from one survivor to another</div>
+</footer>
+</body>
+</html>

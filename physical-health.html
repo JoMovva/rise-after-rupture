@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Physical Health After Rupture · Rise After Rupture</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--cream:#FAF6F1;--warm-white:#FDF9F5;--terracotta:#C4735A;--terracotta-light:#D98E78;--mauve:#9B7B8A;--mauve-dark:#6B4E5E;--sage:#8A9E8C;--text-dark:#2C1F1A;--text-mid:#5C4A42;--text-light:#9A8880;--gold:#C9A96E;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,246,241,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,115,90,0.12);}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--terracotta);letter-spacing:0.02em;text-decoration:none;}
+  .nav-back{display:inline-flex;align-items:center;gap:0.5rem;color:var(--text-mid);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:1.5px solid rgba(92,74,66,0.25);padding:0.45rem 1.1rem;border-radius:2rem;transition:all 0.2s;}
+  .nav-back:hover{color:var(--terracotta);border-color:var(--terracotta);}
+  .page-hero{padding:9rem 3rem 4rem;max-width:900px;margin:0 auto;}
+  .page-tag{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid var(--terracotta);padding:0.35rem 1rem;border-radius:2rem;margin-bottom:1.5rem;}
+  .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--text-dark);margin-bottom:1.2rem;}
+  .page-title em{font-style:italic;color:var(--terracotta);}
+  .page-intro{font-size:1.05rem;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:680px;border-left:3px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3rem;}
+  .content-wrap{max-width:900px;margin:0 auto;padding:0 3rem 6rem;}
+  .section-block{margin-bottom:3.5rem;}
+  .section-block h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text-dark);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(196,115,90,0.2);}
+  .section-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--mauve-dark);margin:1.5rem 0 0.6rem;}
+  .section-block p{font-size:0.97rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1rem;}
+  .section-block p strong{color:var(--text-dark);font-weight:500;}
+  .section-block ul{list-style:none;margin:0.5rem 0 1.2rem;padding:0;}
+  .section-block ul li{font-size:0.95rem;line-height:1.8;color:var(--text-mid);font-weight:300;padding:0.35rem 0 0.35rem 1.8rem;position:relative;}
+  .section-block ul li::before{content:'✦';position:absolute;left:0;color:var(--terracotta);font-size:0.58rem;top:0.72rem;}
+  .warm-callout{background:linear-gradient(135deg,#F5EDE8 0%,#EDD9D0 100%);border-radius:1.2rem;padding:1.8rem 2.2rem;margin:2rem 0;border-left:4px solid var(--terracotta);}
+  .warm-callout p{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;line-height:1.7;color:var(--text-dark);margin:0;font-weight:300;}
+  .info-card{background:white;border-radius:1rem;padding:1.8rem 2rem;border:1px solid rgba(196,115,90,0.12);margin:1.2rem 0;box-shadow:0 4px 18px rgba(196,115,90,0.07);}
+  .info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--text-dark);margin-bottom:0.5rem;}
+  .info-card p{margin:0;font-size:0.9rem;line-height:1.75;}
+  .warning-box{background:#FDF5F3;border:1.5px solid rgba(196,115,90,0.35);border-radius:1rem;padding:1.5rem 2rem;margin:1.5rem 0;}
+  .warning-title{font-weight:500;font-size:0.85rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.7rem;}
+  .stat-highlight{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;}
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0;}
+  .stat-card{background:white;border-radius:1rem;padding:1.5rem;text-align:center;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 18px rgba(196,115,90,0.06);}
+  .stat-card .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;margin-bottom:0.4rem;}
+  .stat-card .label{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);line-height:1.4;}
+  .founder-aside{display:flex;gap:2rem;align-items:center;background:white;border-radius:1.5rem;padding:2rem;margin:3rem 0;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 20px rgba(196,115,90,0.08);}
+  .founder-aside img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(196,115,90,0.3);flex-shrink:0;}
+  .founder-aside-text p{font-size:0.88rem;line-height:1.75;color:var(--text-mid);font-weight:300;margin:0;}
+  .founder-aside-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--terracotta);margin-bottom:0.3rem;}
+  .join-cta{background:linear-gradient(135deg,#2C1F1A 0%,#4A2E28 100%);border-radius:1.5rem;padding:3rem;text-align:center;margin:4rem 0 2rem;}
+  .join-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:white;margin-bottom:0.8rem;}
+  .join-cta p{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.75;margin-bottom:1.6rem;max-width:500px;margin-left:auto;margin-right:auto;}
+  .btn-primary{background:var(--terracotta);color:white;padding:0.85rem 2.2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;text-decoration:none;display:inline-block;transition:background 0.3s;letter-spacing:0.04em;}
+  .btn-primary:hover{background:var(--mauve-dark);}
+  footer{background:#1A0F0C;color:rgba(255,255,255,0.5);padding:2.5rem 3rem;text-align:center;}
+  .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--terracotta-light);margin-bottom:0.5rem;}
+  .footer-link{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+  .footer-link:hover{color:var(--terracotta-light);}
+  .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:0.8rem;}
+  @media(max-width:700px){nav{padding:1rem 1.5rem;}.page-hero,.content-wrap{padding-left:1.5rem;padding-right:1.5rem;}.stats-row{grid-template-columns:1fr;}.founder-aside{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="rise-after-rupture.html" class="nav-logo">Rise After Rupture</a>
+  <a href="rise-after-rupture.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Your Body · Recovery · Healing</span>
+  <h1 class="page-title">Your Physical Recovery<br><em>What to Expect & How to Heal</em></h1>
+  <p class="page-intro">Your body has been through something extraordinary — a life-threatening emergency, major surgery, and a profound hormonal shift, all at once. This guide covers what to expect week by week, the warning signs to watch for, and how to advocate for yourself with your medical team.</p>
+</div>
+
+<div class="content-wrap">
+  <div class="section-block">
+    <h2>What Just Happened to Your Body</h2>
+    <p>An ectopic rupture is a major abdominal emergency. When the fallopian tube ruptures, it causes significant internal bleeding — you weren't just sick. You were in a life-threatening situation, and your body fought hard to survive it. Most ruptures are treated with emergency laparoscopic (keyhole) surgery, though some require open surgery (laparotomy) depending on the extent of bleeding and your surgeon's ability to work safely.</p>
+    <p>During surgery, the affected fallopian tube was either removed entirely (salpingectomy) or in some cases repaired (salpingotomy). If you lost significant blood, you may have received a transfusion. Your body has been through something real and enormous — and healing from it takes time.</p>
+    <div class="info-card">
+      <div class="info-card-title">Laparoscopy vs. Laparotomy — what's the difference?</div>
+      <p>Laparoscopy (keyhole surgery) uses small incisions and a camera — typical recovery is 2–4 weeks. Laparotomy (open surgery) involves a larger incision and is used in emergencies with heavy bleeding — recovery takes closer to 4–6 weeks. If you had open surgery, please be especially patient with yourself.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Week by Week: What to Expect</h2>
+    <h3>Days 1–7: The acute phase</h3>
+    <ul>
+      <li>Significant pain around your incision sites and lower abdomen — take your prescribed pain medication, don't try to tough it out</li>
+      <li>Shoulder tip pain from gas used during laparoscopy — this is very common and will resolve on its own, usually within a few days</li>
+      <li>Bloating and difficulty with bowel movements — walk gently, stay hydrated, eat soft foods</li>
+      <li>Extreme fatigue — your body is in repair mode. Sleep as much as you need to</li>
+      <li>Vaginal bleeding, similar to a period, that may last up to 2 weeks</li>
+      <li>Emotional tearfulness — partly hormonal, completely valid</li>
+    </ul>
+    <h3>Weeks 2–4: Early recovery</h3>
+    <ul>
+      <li>Pain should be gradually decreasing, but expect good days and harder days — this is normal</li>
+      <li>Most women with keyhole surgery can begin returning to light activities and short walks</li>
+      <li>Avoid lifting anything heavier than a light bag</li>
+      <li>You may still feel emotional and depleted — hormones are dropping and your body is still healing internally</li>
+      <li>Your surgeon will want to monitor your hCG levels to confirm they are dropping to zero</li>
+    </ul>
+    <h3>Weeks 4–6: Rebuilding</h3>
+    <ul>
+      <li>Most people are cleared for general daily activities within 4–6 weeks from a physical standpoint</li>
+      <li>Swimming is often safe once wounds have healed — ask your surgeon before returning to exercise</li>
+      <li>Running, intense gym work, and heavy lifting should wait until you have a specific green light from your doctor</li>
+      <li>If you had open surgery, this entire timeline extends — give yourself more time, not less</li>
+    </ul>
+    <div class="warm-callout">
+      <p>"Rest is not laziness. In those early weeks, rest is your most important medicine. You just survived emergency surgery. Give yourself full permission to do nothing but heal."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Hormonal Changes After a Rupture</h2>
+    <p>Your hCG (pregnancy hormone) levels drop sharply after an ectopic pregnancy ends — similar to what happens after any pregnancy loss, but often more abrupt. This hormonal shift is real and can cause:</p>
+    <ul>
+      <li>Significant mood changes and emotional sensitivity — this is biology, not weakness</li>
+      <li>Disrupted sleep patterns, vivid dreams, or insomnia</li>
+      <li>Hair shedding, often beginning 2–3 months after the event (called telogen effluvium — it is temporary)</li>
+      <li>Skin changes, breast tenderness, or bloating</li>
+      <li>Your first period may arrive 4–8 weeks after surgery and may be heavier or different than usual — this is normal</li>
+    </ul>
+    <p>These symptoms are temporary. But if they feel overwhelming, speak to your OB or GP about support options — they can help.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>Warning Signs: When to Seek Immediate Help</h2>
+    <div class="warning-box">
+      <div class="warning-title">⚠ Call your doctor or go to the ER right away if you experience:</div>
+      <ul>
+        <li>Increasing rather than decreasing pain, especially on one side of your pelvis</li>
+        <li>Fever above 38°C / 100.4°F</li>
+        <li>Heavy bright red bleeding — soaking more than one pad per hour for two hours</li>
+        <li>Signs of infection at incision sites: redness, warmth, pus, or swelling</li>
+        <li>Dizziness, fainting, or a sudden feeling that something is very wrong</li>
+        <li>Severe shoulder pain (can indicate internal bleeding from residual fluid)</li>
+      </ul>
+    </div>
+    <p>You know your body. If something feels wrong, it is always the right call to seek help. You do not need to minimize or second-guess yourself with a medical team after what you've been through.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>Advocating for Yourself at Follow-Up Appointments</h2>
+    <p>After a traumatic emergency, medical settings can feel intimidating. Write down questions before appointments so you don't lose them in the moment. Here are things you are fully entitled to ask:</p>
+    <ul>
+      <li>"What was done during my surgery, and what should I expect during recovery?"</li>
+      <li>"When will my hCG levels be monitored, and what does the target look like?"</li>
+      <li>"What are the specific warning signs I should watch for at home?"</li>
+      <li>"When can I return to work / exercise / sex / driving?"</li>
+      <li>"What does this mean for my future fertility, and when can we have that conversation?"</li>
+      <li>"I'm struggling emotionally — can you refer me to a counselor who specializes in pregnancy loss?"</li>
+    </ul>
+    <div class="warm-callout">
+      <p>"You are not a burden for asking questions. You are a patient who just survived something life-threatening. You deserve to be fully informed about your own body and recovery."</p>
+    </div>
+  </div>
+
+
+  <div class="join-cta">
+    <h3>You don't have to navigate this alone.</h3>
+    <p>Join our community of survivors — virtual support groups, honest resources, and women who truly understand what you've been through.</p>
+    <a href="rise-after-rupture.html#join" class="btn-primary">Join Our Community 💛</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Rise After Rupture</div>
+  <a href="rise-after-rupture.html" class="footer-link">← Return to main site</a>
+  <div class="footer-copy">© 2026 Rise After Rupture · Made with love, from one survivor to another</div>
+</footer>
+</body>
+</html>

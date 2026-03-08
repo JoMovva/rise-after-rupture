@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Recovering Far From Family · Rise After Rupture</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--cream:#FAF6F1;--warm-white:#FDF9F5;--terracotta:#C4735A;--terracotta-light:#D98E78;--mauve:#9B7B8A;--mauve-dark:#6B4E5E;--sage:#8A9E8C;--text-dark:#2C1F1A;--text-mid:#5C4A42;--text-light:#9A8880;--gold:#C9A96E;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,246,241,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,115,90,0.12);}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--terracotta);letter-spacing:0.02em;text-decoration:none;}
+  .nav-back{display:inline-flex;align-items:center;gap:0.5rem;color:var(--text-mid);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:1.5px solid rgba(92,74,66,0.25);padding:0.45rem 1.1rem;border-radius:2rem;transition:all 0.2s;}
+  .nav-back:hover{color:var(--terracotta);border-color:var(--terracotta);}
+  .page-hero{padding:9rem 3rem 4rem;max-width:900px;margin:0 auto;}
+  .page-tag{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid var(--terracotta);padding:0.35rem 1rem;border-radius:2rem;margin-bottom:1.5rem;}
+  .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--text-dark);margin-bottom:1.2rem;}
+  .page-title em{font-style:italic;color:var(--terracotta);}
+  .page-intro{font-size:1.05rem;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:680px;border-left:3px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3rem;}
+  .content-wrap{max-width:900px;margin:0 auto;padding:0 3rem 6rem;}
+  .section-block{margin-bottom:3.5rem;}
+  .section-block h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text-dark);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(196,115,90,0.2);}
+  .section-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--mauve-dark);margin:1.5rem 0 0.6rem;}
+  .section-block p{font-size:0.97rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1rem;}
+  .section-block p strong{color:var(--text-dark);font-weight:500;}
+  .section-block ul{list-style:none;margin:0.5rem 0 1.2rem;padding:0;}
+  .section-block ul li{font-size:0.95rem;line-height:1.8;color:var(--text-mid);font-weight:300;padding:0.35rem 0 0.35rem 1.8rem;position:relative;}
+  .section-block ul li::before{content:'✦';position:absolute;left:0;color:var(--terracotta);font-size:0.58rem;top:0.72rem;}
+  .warm-callout{background:linear-gradient(135deg,#F5EDE8 0%,#EDD9D0 100%);border-radius:1.2rem;padding:1.8rem 2.2rem;margin:2rem 0;border-left:4px solid var(--terracotta);}
+  .warm-callout p{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;line-height:1.7;color:var(--text-dark);margin:0;font-weight:300;}
+  .info-card{background:white;border-radius:1rem;padding:1.8rem 2rem;border:1px solid rgba(196,115,90,0.12);margin:1.2rem 0;box-shadow:0 4px 18px rgba(196,115,90,0.07);}
+  .info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--text-dark);margin-bottom:0.5rem;}
+  .info-card p{margin:0;font-size:0.9rem;line-height:1.75;}
+  .warning-box{background:#FDF5F3;border:1.5px solid rgba(196,115,90,0.35);border-radius:1rem;padding:1.5rem 2rem;margin:1.5rem 0;}
+  .warning-title{font-weight:500;font-size:0.85rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.7rem;}
+  .stat-highlight{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;}
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0;}
+  .stat-card{background:white;border-radius:1rem;padding:1.5rem;text-align:center;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 18px rgba(196,115,90,0.06);}
+  .stat-card .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;margin-bottom:0.4rem;}
+  .stat-card .label{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);line-height:1.4;}
+  .founder-aside{display:flex;gap:2rem;align-items:center;background:white;border-radius:1.5rem;padding:2rem;margin:3rem 0;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 20px rgba(196,115,90,0.08);}
+  .founder-aside img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(196,115,90,0.3);flex-shrink:0;}
+  .founder-aside-text p{font-size:0.88rem;line-height:1.75;color:var(--text-mid);font-weight:300;margin:0;}
+  .founder-aside-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--terracotta);margin-bottom:0.3rem;}
+  .join-cta{background:linear-gradient(135deg,#2C1F1A 0%,#4A2E28 100%);border-radius:1.5rem;padding:3rem;text-align:center;margin:4rem 0 2rem;}
+  .join-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:white;margin-bottom:0.8rem;}
+  .join-cta p{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.75;margin-bottom:1.6rem;max-width:500px;margin-left:auto;margin-right:auto;}
+  .btn-primary{background:var(--terracotta);color:white;padding:0.85rem 2.2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;text-decoration:none;display:inline-block;transition:background 0.3s;letter-spacing:0.04em;}
+  .btn-primary:hover{background:var(--mauve-dark);}
+  footer{background:#1A0F0C;color:rgba(255,255,255,0.5);padding:2.5rem 3rem;text-align:center;}
+  .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--terracotta-light);margin-bottom:0.5rem;}
+  .footer-link{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+  .footer-link:hover{color:var(--terracotta-light);}
+  .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:0.8rem;}
+  @media(max-width:700px){nav{padding:1rem 1.5rem;}.page-hero,.content-wrap{padding-left:1.5rem;padding-right:1.5rem;}.stats-row{grid-template-columns:1fr;}.founder-aside{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="rise-after-rupture.html" class="nav-logo">Rise After Rupture</a>
+  <a href="rise-after-rupture.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Distance · Community · Strength</span>
+  <h1 class="page-title">Recovering Far<br><em>From Your People</em></h1>
+  <p class="page-intro">When you navigate recovery thousands of miles from your family — without the people who would show up at your door, bring food, and simply be there — that distance becomes its own grief. This page is for the women who are figuring out how to heal far from home.</p>
+</div>
+
+<div class="content-wrap">
+  <div class="section-block">
+    <h2>The Weight Nobody Names</h2>
+    <p>Most resources about ectopic rupture recovery don't talk about what it means to go through this far from your family — without the people who would normally show up at your door, bring you food, sit beside you through the hard nights, and simply be there in the way that only your people can be.</p>
+    <p>You may have told your family over the phone. You may have watched their faces crumple on a screen, helpless from thousands of miles away. You may have come home from the hospital to a quiet apartment when what you needed was your mother's hands, your sister's voice in the next room, the familiar sounds of a house that knew you before all of this.</p>
+    <p>That ache is not separate from your grief. It is part of it. And it deserves to be named.</p>
+    <div class="warm-callout">
+      <p>"The distance you have traveled to build your life here is extraordinary. The courage it takes to be far from your people during a crisis is something only another immigrant truly understands. You are allowed to feel both proud and devastated at the same time."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>The Particular Grief of Recovering Alone</h2>
+    <p>Recovering from major surgery without family nearby means carrying practical and emotional weight simultaneously — when your whole body is asking to be held. Some things that may be making this harder:</p>
+    <ul>
+      <li>No one to bring meals, drive you to follow-up appointments, or sit with you during hard moments</li>
+      <li>The feeling that you have to perform being okay for friends who care but don't fully understand the weight of what happened</li>
+      <li>Time zone differences that make phone calls feel inadequate — wanting your mother physically present, not on a screen</li>
+      <li>Cultural expectations that make it hard to be honest about how much you are struggling</li>
+      <li>A sense of loneliness that feels different from ordinary loneliness — more specific, more aching</li>
+    </ul>
+    <p>All of this is real. And none of it means you are failing at recovery. It means you are human, and you are far from home.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>Communicating With Family Across Distance</h2>
+    <p>It can be genuinely hard to know how much to share with family who cannot help in the ways they desperately want to. Some things that may help:</p>
+    <ul>
+      <li><strong>Be as honest as you can bear.</strong> Families often sense when something is being held back, and the distance already breeds worry. The truth — even partial — is usually better than protective silence</li>
+      <li><strong>Assign specific roles.</strong> "Can you call me every other day?" or "Can you send me a voice message every morning?" is far easier for people far away to act on than a general offer of support</li>
+      <li><strong>Voice notes and messages.</strong> Sometimes hearing a familiar voice without having to perform being okay — without the visual of a video call — is exactly what you need</li>
+      <li><strong>Let your family grieve too.</strong> They may be processing the loss of a grandchild. They need to be allowed to grieve alongside you, not just support you from a distance</li>
+      <li><strong>You don't have to update everyone.</strong> It's okay to nominate one person — a parent, a sibling — to be your main contact and let them share updates with others</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>Cultural Expectations Around Grief and Pregnancy Loss</h2>
+    <p>Many cultures carry complex, often unspoken norms about how women should process pregnancy loss — or whether it should be spoken of at all. You may be navigating:</p>
+    <ul>
+      <li>Pressure not to have told anyone about the pregnancy before a certain point — which now means grieving in silence</li>
+      <li>Family who don't fully understand what an ectopic pregnancy or rupture is, and who minimize it as "just a miscarriage"</li>
+      <li>Expectations to be strong and move forward quickly — especially from family who don't grasp the surgical reality of what happened</li>
+      <li>Shame or embarrassment around "female health matters" that makes honest conversation difficult</li>
+      <li>A sense that asking for help — especially from strangers or professionals — is weakness or a sign that something is fundamentally wrong</li>
+    </ul>
+    <div class="warm-callout">
+      <p>"You can love your culture deeply and still decide that this particular silence is not one you are willing to carry. You are allowed to break the tradition of not speaking about this. Your grief is real, and it deserves to exist in the open — not just in your own body."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>Building Community and Practical Support Where You Are</h2>
+    <p>You may not have family nearby, but community is something that can be built — intentionally and with care. In the practical early weeks:</p>
+    <ul>
+      <li>Ask directly for specific help — "Could you bring dinner on Thursday?" is easier for most people to say yes to than a general offer to help</li>
+      <li>Your employer's EAP (Employee Assistance Program) often includes counseling and can sometimes connect you with practical community resources</li>
+      <li>Local cultural community organizations or houses of worship may offer support networks</li>
+      <li>Hospital social workers can connect you with local resources for meals, transport, and support</li>
+    </ul>
+    <p>For ongoing emotional support:</p>
+    <ul>
+      <li>Therapists who specialize in immigrant experiences and cultural identity — they understand the layered grief of living far from your roots</li>
+      <li>Online communities, including Rise After Rupture's own virtual support groups — many members are immigrants, navigating recovery in the space between two worlds</li>
+      <li>One honest conversation with a friend who has been receiving a protected version of the truth — sometimes sharing opens doors you didn't know existed</li>
+    </ul>
+    <div class="info-card">
+      <div class="info-card-title">Our virtual support groups are made for you</div>
+      <p>Rise After Rupture's support groups are virtual and accessible from anywhere in the US. Many members are far from their families, carrying the grief of a rupture without their people beside them. You will find women here who understand exactly what it means to miss your mother in a specific, unbearable way — and to still be here, still building, still going.</p>
+    </div>
+  </div>
+
+
+  <div class="join-cta">
+    <h3>You don't have to navigate this alone.</h3>
+    <p>Join our community of survivors — virtual support groups, honest resources, and women who truly understand what you've been through.</p>
+    <a href="rise-after-rupture.html#join" class="btn-primary">Join Our Community 💛</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Rise After Rupture</div>
+  <a href="rise-after-rupture.html" class="footer-link">← Return to main site</a>
+  <div class="footer-copy">© 2026 Rise After Rupture · Made with love, from one survivor to another</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fertility After Ectopic Rupture · Rise After Rupture</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{--cream:#FAF6F1;--warm-white:#FDF9F5;--terracotta:#C4735A;--terracotta-light:#D98E78;--mauve:#9B7B8A;--mauve-dark:#6B4E5E;--sage:#8A9E8C;--text-dark:#2C1F1A;--text-mid:#5C4A42;--text-light:#9A8880;--gold:#C9A96E;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,246,241,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,115,90,0.12);}
+  .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--terracotta);letter-spacing:0.02em;text-decoration:none;}
+  .nav-back{display:inline-flex;align-items:center;gap:0.5rem;color:var(--text-mid);text-decoration:none;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border:1.5px solid rgba(92,74,66,0.25);padding:0.45rem 1.1rem;border-radius:2rem;transition:all 0.2s;}
+  .nav-back:hover{color:var(--terracotta);border-color:var(--terracotta);}
+  .page-hero{padding:9rem 3rem 4rem;max-width:900px;margin:0 auto;}
+  .page-tag{display:inline-block;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);border:1px solid var(--terracotta);padding:0.35rem 1rem;border-radius:2rem;margin-bottom:1.5rem;}
+  .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--text-dark);margin-bottom:1.2rem;}
+  .page-title em{font-style:italic;color:var(--terracotta);}
+  .page-intro{font-size:1.05rem;line-height:1.85;color:var(--text-mid);font-weight:300;max-width:680px;border-left:3px solid var(--terracotta);padding-left:1.5rem;margin-bottom:3rem;}
+  .content-wrap{max-width:900px;margin:0 auto;padding:0 3rem 6rem;}
+  .section-block{margin-bottom:3.5rem;}
+  .section-block h2{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:400;color:var(--text-dark);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(196,115,90,0.2);}
+  .section-block h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--mauve-dark);margin:1.5rem 0 0.6rem;}
+  .section-block p{font-size:0.97rem;line-height:1.9;color:var(--text-mid);font-weight:300;margin-bottom:1rem;}
+  .section-block p strong{color:var(--text-dark);font-weight:500;}
+  .section-block ul{list-style:none;margin:0.5rem 0 1.2rem;padding:0;}
+  .section-block ul li{font-size:0.95rem;line-height:1.8;color:var(--text-mid);font-weight:300;padding:0.35rem 0 0.35rem 1.8rem;position:relative;}
+  .section-block ul li::before{content:'✦';position:absolute;left:0;color:var(--terracotta);font-size:0.58rem;top:0.72rem;}
+  .warm-callout{background:linear-gradient(135deg,#F5EDE8 0%,#EDD9D0 100%);border-radius:1.2rem;padding:1.8rem 2.2rem;margin:2rem 0;border-left:4px solid var(--terracotta);}
+  .warm-callout p{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-style:italic;line-height:1.7;color:var(--text-dark);margin:0;font-weight:300;}
+  .info-card{background:white;border-radius:1rem;padding:1.8rem 2rem;border:1px solid rgba(196,115,90,0.12);margin:1.2rem 0;box-shadow:0 4px 18px rgba(196,115,90,0.07);}
+  .info-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--text-dark);margin-bottom:0.5rem;}
+  .info-card p{margin:0;font-size:0.9rem;line-height:1.75;}
+  .warning-box{background:#FDF5F3;border:1.5px solid rgba(196,115,90,0.35);border-radius:1rem;padding:1.5rem 2rem;margin:1.5rem 0;}
+  .warning-title{font-weight:500;font-size:0.85rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--terracotta);margin-bottom:0.7rem;}
+  .stat-highlight{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;}
+  .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0;}
+  .stat-card{background:white;border-radius:1rem;padding:1.5rem;text-align:center;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 18px rgba(196,115,90,0.06);}
+  .stat-card .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--terracotta);line-height:1;margin-bottom:0.4rem;}
+  .stat-card .label{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-light);line-height:1.4;}
+  .founder-aside{display:flex;gap:2rem;align-items:center;background:white;border-radius:1.5rem;padding:2rem;margin:3rem 0;border:1px solid rgba(196,115,90,0.12);box-shadow:0 4px 20px rgba(196,115,90,0.08);}
+  .founder-aside img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid rgba(196,115,90,0.3);flex-shrink:0;}
+  .founder-aside-text p{font-size:0.88rem;line-height:1.75;color:var(--text-mid);font-weight:300;margin:0;}
+  .founder-aside-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--terracotta);margin-bottom:0.3rem;}
+  .join-cta{background:linear-gradient(135deg,#2C1F1A 0%,#4A2E28 100%);border-radius:1.5rem;padding:3rem;text-align:center;margin:4rem 0 2rem;}
+  .join-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:white;margin-bottom:0.8rem;}
+  .join-cta p{color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.75;margin-bottom:1.6rem;max-width:500px;margin-left:auto;margin-right:auto;}
+  .btn-primary{background:var(--terracotta);color:white;padding:0.85rem 2.2rem;border-radius:3rem;font-size:0.88rem;font-weight:500;text-decoration:none;display:inline-block;transition:background 0.3s;letter-spacing:0.04em;}
+  .btn-primary:hover{background:var(--mauve-dark);}
+  footer{background:#1A0F0C;color:rgba(255,255,255,0.5);padding:2.5rem 3rem;text-align:center;}
+  .footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--terracotta-light);margin-bottom:0.5rem;}
+  .footer-link{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+  .footer-link:hover{color:var(--terracotta-light);}
+  .footer-copy{font-size:0.72rem;color:rgba(255,255,255,0.25);margin-top:0.8rem;}
+  @media(max-width:700px){nav{padding:1rem 1.5rem;}.page-hero,.content-wrap{padding-left:1.5rem;padding-right:1.5rem;}.stats-row{grid-template-columns:1fr;}.founder-aside{flex-direction:column;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="rise-after-rupture.html" class="nav-logo">Rise After Rupture</a>
+  <a href="rise-after-rupture.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Fertility · Hope · What the Research Says</span>
+  <h1 class="page-title">Fertility After<br><em>Ectopic Rupture</em></h1>
+  <p class="page-intro">The fear about future fertility is often the first thing that surfaces after a rupture. This page shares honest, research-backed information about what the path forward actually looks like — because you deserve real facts, not vague reassurance.</p>
+</div>
+
+<div class="content-wrap">
+  <div class="section-block">
+    <h2>The Question Everyone Carries Home From the Hospital</h2>
+    <p>The fear about future fertility is often the very first thing that surfaces after a rupture — sometimes even before the physical pain has peaked. It is one of the most human fears imaginable: <em>will I still be able to have a baby?</em></p>
+    <p>The answer, for most women, is yes. Not "maybe" — yes. Let's look at what the research actually says.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>What the Research Tells Us</h2>
+    <div class="stats-row">
+      <div class="stat-card"><div class="num">65%</div><div class="label">of women who wish to conceive after ectopic pregnancy achieve pregnancy within 18 months</div></div>
+      <div class="stat-card"><div class="num">~10%</div><div class="label">risk of recurrence in a future pregnancy — meaning roughly 90% will not recur</div></div>
+      <div class="stat-card"><div class="num">64–70%</div><div class="label">rate of successful intrauterine pregnancy at 2 years, regardless of treatment method</div></div>
+    </div>
+    <p>A landmark study published in <em>Fertility and Sterility</em> tracked 328 women who wished to conceive after ectopic pregnancy. More than half had a successful intrauterine pregnancy within one year, and nearly two-thirds within two years. Importantly, a rupture itself did not significantly decrease the rate of future intrauterine pregnancy compared to unruptured ectopic pregnancies.</p>
+    <div class="warm-callout">
+      <p>"Statistics describe populations, not individuals. Many women who have been through exactly what you've been through are now holding their babies. You are not a percentage — you are a person, with every reason for real hope."</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>One Tube Removed: What Actually Happens</h2>
+    <p>If your affected fallopian tube was removed (salpingectomy), here is what you need to know:</p>
+    <ul>
+      <li>Your two ovaries alternate ovulation — but not in a perfectly predictable way. Either ovary can release an egg in any given cycle, and your remaining tube can pick up eggs from either ovary</li>
+      <li>The remaining tube compensates more effectively than most people expect</li>
+      <li>Natural conception remains entirely possible with one tube</li>
+      <li>Randomized controlled trials have shown similar rates of subsequent intrauterine pregnancy and ectopic recurrence whether the tube was removed or preserved</li>
+    </ul>
+    <div class="info-card">
+      <div class="info-card-title">If both tubes are absent or severely damaged</div>
+      <p>IVF (in vitro fertilization) bypasses the fallopian tubes entirely — embryos are placed directly into the uterus. IVF success rates are meaningful, particularly for women under 35. This path is not a consolation prize; it is a valid, well-established route to parenthood that many women have taken after ectopic rupture.</p>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <h2>When Is It Safe to Try Again?</h2>
+    <p>Most doctors recommend waiting until your hCG level has returned to zero and you've had at least one natural menstrual cycle — typically around 3 months after your rupture. Some guidelines say 2 months is sufficient. This timeframe allows for:</p>
+    <ul>
+      <li>Your hCG to fully clear, which is important before a new pregnancy is attempted</li>
+      <li>Your uterine lining to rebuild and normalize</li>
+      <li>Your body to recover from the physical stress of surgery and blood loss</li>
+    </ul>
+    <p>Emotionally, many women find they need longer. The desire to try again and the fear of trying again often arrive simultaneously — and both are completely valid. There is no rush. Taking the time you need is not giving up; it is being wise about your own healing.</p>
+    <h3>Questions to ask your OB or reproductive specialist</h3>
+    <ul>
+      <li>"Has my hCG returned to zero?"</li>
+      <li>"Is my remaining tube clear and healthy? Should we do an HSG (hysterosalpingogram) to check tube patency?"</li>
+      <li>"Given my history, should I see a reproductive endocrinologist?"</li>
+      <li>"What early monitoring will I receive when I become pregnant again?"</li>
+    </ul>
+  </div>
+
+  <div class="section-block">
+    <h2>Your Next Pregnancy: What Early Monitoring Looks Like</h2>
+    <p>Once you become pregnant again after an ectopic rupture, you should receive proactive early monitoring. Make sure your care team knows your full history. Here is what good care looks like:</p>
+    <ul>
+      <li>Early blood work to confirm hCG is rising appropriately — a healthy intrauterine pregnancy typically shows hCG doubling every 48–72 hours in early weeks</li>
+      <li>A transvaginal ultrasound at 5–6 weeks to confirm the gestational sac is inside the uterus</li>
+      <li>If you have any one-sided pain, spotting, or a sense that something is wrong at any point — go to the emergency room immediately and tell them your history</li>
+    </ul>
+    <div class="warm-callout">
+      <p>"You are allowed to want this. You are allowed to grieve what was lost and still hope for what could come. Both of those truths can live in you at once — and they do, for so many women who have walked this exact road."</p>
+    </div>
+  </div>
+
+
+  <div class="join-cta">
+    <h3>You don't have to navigate this alone.</h3>
+    <p>Join our community of survivors — virtual support groups, honest resources, and women who truly understand what you've been through.</p>
+    <a href="rise-after-rupture.html#join" class="btn-primary">Join Our Community 💛</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Rise After Rupture</div>
+  <a href="rise-after-rupture.html" class="footer-link">← Return to main site</a>
+  <div class="footer-copy">© 2026 Rise After Rupture · Made with love, from one survivor to another</div>
+</footer>
+</body>
+</html>
